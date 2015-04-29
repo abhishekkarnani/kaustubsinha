@@ -1,5 +1,132 @@
-<h2>Hello World</h2>
-<p>
-<br/>
-	The time is now <%= Time.now %>.
-</p>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Kaustub Sinha</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= csrf_meta_tags %>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+</script>
+<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,300,600,500,900,700,100,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+		$('.about-grid a').Chocolat({linkImages:false});
+	});
+</script>
+</head>
+<body>	
+		<div id="home" class="header">
+			<div class="container">
+				<!-- -->
+				<div class="nav-icon">
+					 <a href="#" class="right_bt" id="activator"><span> </span> </a>
+				</div>
+				 <div class="box" id="box">
+					 <div class="box_content">        					                         
+						<div class="box_content_center">
+						 	<div class="form_content">
+								<div class="menu_box_list">
+									<ul>
+										<li><a class="scroll" href="#home">home</a></li>
+										<li><a class="scroll" href="#about">About</a></li>
+										<div class="clear"> </div>
+									</ul>
+								</div>
+								<a class="boxclose" id="boxclose"> <span> </span></a>
+							</div>                                  
+						</div> 	
+					</div> 
+				</div>    
+				 <script type="text/javascript">
+					var $ = jQuery.noConflict();
+						$(function() {
+							$('#activator').click(function(){
+								$('#box').animate({'top':'0px'},500);
+							});
+							$('#boxclose').click(function(){
+							$('#box').animate({'top':'-700px'},500);
+							});
+						});
+						$(document).ready(function(){
+						//Hide (Collapse) the toggle containers on load
+						$(".toggle_container").hide(); 
+						//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+						$(".trigger").click(function(){
+							$(this).toggleClass("active").next().slideToggle("slow");
+								return false; //Prevent the browser jump to the link anchor
+						});
+											
+					});
+				</script>
+				<div class="banner-info text-center">
+					<%= image_tag "kaustub.gif", :class => "img-responsive" %>
+					<h1>Kaustub Sinha</h1>
+					<p>Hardwork makes the man perfect.</p>
+					<ul>
+						
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="about" class="about">
+			<div class="container">
+				<div class="head-section text-center">
+					<h2>About Me</h2>
+					<span></span>
+				</div>
+				<div class="about-grids">
+					<div class="col-md-6 about-left-grid">
+						<h3>Kaustub Sinha</h3>
+						<span>System Engineer/Techno-Functional </span>
+						<p>Welcome, my name is Kaustub.  I am a software engineer from India who loves to write software to build great products and help businesses succeed with their goals. I appreciate good logics and I am seeing it's importance more then ever in todays apps, web sites and software products.</p>
+					</div>
+					<div class="col-md-6 about-right-grid">
+<iframe src='http://www.flipkart.com/affiliate/displayWidget?affrid=WRID-143034150313342726' style = "margin-left:150px;" frameborder=0 height=250 width=300></iframe>					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		<div class="footer">
+				<div class="footer-left">
+					<p>Designed by Kaustub Sinha</a></p>
+				</div>
+				<div class="footer-right">
+					<ul>
+						<li><a href="#"><span class="face"> </span></a></li>
+						<li><a href="#"><span class="twit"> </span></a></li>
+						<li><a href="#"><span class="tech"> </span></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+									<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+		</div>
+</body>
+</html>
+
